@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 // Redux actions
 import * as actions from 'state/actions';
 
-import Navbar from 'components/navbar/navbar';
+import Topbar from 'components/Topbar/Topbar';
 import Card from 'components/Card/Card';
 import * as S from './Profile.styled';
 
@@ -18,7 +18,7 @@ const Profile = ({
   };
   return (
     <S.Container>
-      <Navbar />
+      <Topbar />
       <Card>
         <S.Image image={userImage} />
         <S.ImageInput

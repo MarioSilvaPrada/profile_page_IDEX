@@ -1,11 +1,11 @@
 import React from 'react';
-import Navbar from 'components/navbar/navbar';
+import Topbar from 'components/Topbar/Topbar';
 import Card from 'components/Card/Card';
 import * as S from './Help.styled';
 
 const Help = () => (
   <S.Wrapper>
-    <Navbar />
+    <Topbar />
     <Card style={{ margin: '2rem auto' }}>
       <S.HepCardWrapper>
         <h2>Contact us</h2>

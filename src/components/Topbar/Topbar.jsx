@@ -1,8 +1,8 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import * as S from './navbar.styled';
+import * as S from './Topbar.styled';
 
-const Navbar = () => {
+const Topbar = () => {
   const { pathname } = useLocation();
   return (
     <S.Container>
@@ -11,4 +11,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Topbar;
