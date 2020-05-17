@@ -2,7 +2,7 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import * as S from './Navbar.styled';
 
-const NavBar = () => {
+const Navbar = () => {
   const { pathname } = useLocation();
   return (
     <S.Container>
@@ -11,4 +11,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Navbar;
