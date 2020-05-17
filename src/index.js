@@ -5,29 +5,38 @@ import './index.css';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
-import NavBar from './components/NavBar/NavBar';
-import App from './routes/App/App';
+
+// Theme
+
+// Redux
+import { Provider } from 'react-redux';
+import store from 'state/store/store';
 import theme from './theme/theme';
+
 // Pages
-import Page1 from './routes/Page1/Page';
-import Page2 from './routes/Page2/Page';
 import PageNotFound from './routes/PageNotFound/PageNotFound';
+import Profile from './routes/Profile/Profile';
+import Help from './routes/Help/Help';
 
 // Components
+import Sidebar from './components/Sidebar/Sidebar';
 
 const rootElement = document.getElementById('root');
 const root = (
-  <ThemeProvider theme={theme}>
-    <Router>
-      <NavBar />
-      <Switch>
-        <Route exact path="/" component={App} />
-        <Route exact path="/1" component={Page1} />
-        <Route exact path="/2" component={Page2} />
-        <Route path="*" component={PageNotFound} />
-      </Switch>
-    </Router>
-  </ThemeProvider>
+  <Provider store={store}>
+    <ThemeProvider theme={theme}>
+      <Router>
+        <div className="root-div">
+          <Sidebar />
+          <Switch>
+            <Route exact path="/" component={Profile} />
+            <Route exact path="/help" component={Help} />
+            <Route path="*" component={PageNotFound} />
+          </Switch>
+        </div>
+      </Router>
+    </ThemeProvider>
+  </Provider>
 );
 
 render(root, rootElement);

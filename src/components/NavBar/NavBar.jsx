@@ -1,13 +1,14 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
+import * as S from './Navbar.styled';
 
-import * as S from './NavBar.styled';
-
-const NavBar = () => (
-  <S.Container>
-    <S.StyledLink to="/">Home</S.StyledLink>
-    <S.StyledLink to="/1">Page1</S.StyledLink>
-    <S.StyledLink to="/2">Page2</S.StyledLink>
-  </S.Container>
-);
+const NavBar = () => {
+  const { pathname } = useLocation();
+  return (
+    <S.Container>
+      <h1>{pathname === '/' ? 'Profile' : 'Help'}</h1>
+    </S.Container>
+  );
+};
 
 export default NavBar;

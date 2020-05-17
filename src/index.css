@@ -8,6 +8,11 @@
   outline: none;
 }
 
+.root-div {
+  display: flex;
+  height: 100%;
+}
+
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
@@ -18,4 +23,19 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+@media screen and (max-width: 950px) {
+  html {
+    font-size: 85%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 75%;
+  }
+  .root-div {
+    flex-direction: column;
+  }
 }

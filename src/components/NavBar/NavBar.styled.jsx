@@ -1,12 +1,20 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
-    padding: 2rem;
-    display: flex;
-    background: #ccc;
+  width: 100%;
+  background: white;
+  height: ${({ theme }) => theme.size.navbarHeight};
+  padding: 0 2rem;
+  display: flex;
+
+  h1 {
+    align-self: flex-end;
+  }
+
+  @media screen and (max-width: 600px) {
+    border-radius: 4px;
+    border: 1px solid black;
+  }
 `;
 
-export const StyledLink = styled(Link)`
-    margin-right: 2rem;
-`;
+export const Text = styled.p``;
