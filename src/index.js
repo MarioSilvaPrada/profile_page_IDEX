@@ -7,11 +7,11 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
 // Theme
+import theme from './theme/theme';
 
 // Redux
 import { Provider } from 'react-redux';
 import store from 'state/store/store';
-import theme from './theme/theme';
 
 // Pages
 import PageNotFound from './routes/PageNotFound/PageNotFound';
