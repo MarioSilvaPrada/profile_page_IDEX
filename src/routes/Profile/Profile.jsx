@@ -7,8 +7,10 @@ import Navbar from 'components/Navbar/Navbar';
 import Card from 'components/Card/Card';
 import * as S from './Profile.styled';
 
-const Profile = ({ setImage, userImage, setLanguage, language }) => {
-  const [ url, setUrl ] = useState('');
+const Profile = ({
+  setImage, userImage, setLanguage, language,
+}) => {
+  const [url, setUrl] = useState('');
 
   const sendImage = () => {
     setImage(url);
@@ -20,8 +22,8 @@ const Profile = ({ setImage, userImage, setLanguage, language }) => {
       <Card>
         <S.Image image={userImage} />
         <S.ImageInput
-          type='text'
-          placeholder='insert image url'
+          type="text"
+          placeholder="insert image url"
           value={url}
           onChange={(e) => setUrl(e.target.value)}
         />
@@ -36,8 +38,8 @@ const Profile = ({ setImage, userImage, setLanguage, language }) => {
         <S.EditSection>
           <S.EditLink style={{ marginRight: '1rem' }}>Select app language</S.EditLink>
           <S.Select value={language} onChange={(e) => setLanguage(e.target.value)}>
-            <option value='english'>English</option>
-            <option value='portuguese'>Português</option>
+            <option value="english">English</option>
+            <option value="portuguese">Português</option>
           </S.Select>
         </S.EditSection>
         <S.EditSection>
