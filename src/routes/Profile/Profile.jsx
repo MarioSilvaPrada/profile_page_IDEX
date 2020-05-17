@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 // Redux actions
 import * as actions from 'state/actions';
 
-import Navbar from 'components/Navbar/Navbar';
+import Navbar from 'components/navbar/navbar';
 import Card from 'components/Card/Card';
 import * as S from './Profile.styled';
 

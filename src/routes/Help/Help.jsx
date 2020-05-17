@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from 'components/Navbar/Navbar';
+import Navbar from 'components/navbar/navbar';
 import Card from 'components/Card/Card';
 import * as S from './Help.styled';
 
